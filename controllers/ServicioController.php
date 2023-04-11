@@ -34,7 +34,7 @@ class ServicioController {
 
         $servicios = Servicio::SQL($consulta);
 
-        // debuguear($servicios);
+         //debuguear($servicios);
 
         $router->render('servicios/buscar', [
             'nombre' => $_SESSION['nombre'],
