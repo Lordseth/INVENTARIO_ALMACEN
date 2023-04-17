@@ -3,23 +3,51 @@
 namespace Controllers;
 
 use Model\Servicio;
+use Model\Insertos;
+use Model\Machuelos;
 use MVC\Router;
 
 class UsuarioController {
-    public static function index(Router $router) {
+    public static function indexS(Router $router) {
 
         session_start();
 
 
         $servicios = Servicio::all();
 
-        $router->render('/usuario/index', [
+        $router->render('/usuarioS/indexS', [
             'nombre'=> $_SESSION['nombre'],
             'servicios' => $servicios
         ]);
     }
 
-    public static function buscar(Router $router) {
+    public static function indexI(Router $router) {
+
+        session_start();
+
+
+        $insertos = Insertos::all();
+
+        $router->render('/usuarioI/indexI', [
+            'nombre'=> $_SESSION['nombre'],
+            'insertos' => $insertos
+        ]);
+    }
+
+    public static function indexM(Router $router) {
+
+        session_start();
+
+
+        $machuelos = Machuelos::all();
+
+        $router->render('/usuarioM/indexM', [
+            'nombre'=> $_SESSION['nombre'],
+            'machuelos' => $machuelos
+        ]);
+    }
+
+    public static function buscarS(Router $router) {
         session_start();
 
 
@@ -34,9 +62,53 @@ class UsuarioController {
 
         // debuguear($servicios);
 
-        $router->render('usuario/buscar', [
+        $router->render('usuarioS/buscarS', [
             'nombre' => $_SESSION['nombre'],
             'servicios' => $servicios
+            //'nombre' => $nombre
+        ]);
+    }
+
+    public static function buscarI(Router $router) {
+        session_start();
+
+
+        $numeroParte = $_GET['numero_parteI'] ?? '';        
+
+        // Consultar la base de datos
+        $consulta = "SELECT insertos.id, insertos.numero_parteI, insertos.descripcionI, insertos.existenciaI, insertos.proveedorI, insertos.ubicacionI, insertos.fotoI ";
+        $consulta .= " FROM insertos  ";
+        $consulta .= " WHERE numero_parteI =  '${numeroParte}' ";
+
+        $insertos = Insertos::SQL($consulta);
+
+        // debuguear($insertos);
+
+        $router->render('usuarioI/buscarI', [
+            'nombre' => $_SESSION['nombre'],
+            'insertos' => $insertos
+            //'nombre' => $nombre
+        ]);
+    }
+
+    public static function buscarM(Router $router) {
+        session_start();
+
+
+        $numeroParte = $_GET['numero_parteM'] ?? '';        
+
+        // Consultar la base de datos
+        $consulta = "SELECT machuelos.id, machuelos.numero_parteM, machuelos.descripcionM, machuelos.existenciaM, machuelos.proveedorM, machuelos.ubicacionM, machuelos.fotoM ";
+        $consulta .= " FROM machuelos  ";
+        $consulta .= " WHERE numero_parteM =  '${numeroParte}' ";
+
+        $machuelos = Machuelos::SQL($consulta);
+
+        // debuguear($insertos);
+
+        $router->render('usuarioM/buscarM', [
+            'nombre' => $_SESSION['nombre'],
+            'machuelos' => $machuelos
             //'nombre' => $nombre
         ]);
     }

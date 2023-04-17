@@ -32,6 +32,8 @@ class ServicioController {
         $consulta .= " FROM descripcion  ";
         $consulta .= " WHERE numero_parte =  '${numeroParte}' ";
 
+        //debuguear($consulta);
+
         $servicios = Servicio::SQL($consulta);
 
          //debuguear($servicios);

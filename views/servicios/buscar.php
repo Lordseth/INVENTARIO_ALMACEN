@@ -8,10 +8,10 @@
 <div class="busqueda">
     <form action="" class="formulario">
         <div class="campo">
-            <label for="pieza">Numero de Parte</label>
+            <label for="servicio">Numero de Parte</label>
             <input 
                 type="text"
-                id="pieza"
+                id="servicio"
                 name="numero_parte"
                 value=""
             >
@@ -59,5 +59,5 @@
 </div>
 
 <?php 
-    $script = "<script src='build/js/buscadorServicios.js'></script>"
+    //$script = "<script src='build/js/buscadorServicios.js'></script>"
 ?>

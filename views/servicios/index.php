@@ -53,5 +53,5 @@
 </ul>
 
 <?php 
-    $script = "<script src='build/js/buscadorServicios.js'></script>"
+ //   $script = "<script src='build/js/buscadorServicios.js'></script>"
 ?>

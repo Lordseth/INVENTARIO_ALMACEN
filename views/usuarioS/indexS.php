@@ -7,7 +7,7 @@
 
 <h2>Buscar por numero de parte</h2>
 <div class="busqueda">
-    <form action="/usuario/buscar" class="formulario">
+    <form action="/usuarioS/buscarS" class="formulario">
         <div class="campo">
             <label for="servicio">Numero de Parte</label>
             <input 
