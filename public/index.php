@@ -37,7 +37,9 @@ $router->get('/usuarioS/buscarS', [UsuarioController::class, 'buscarS']);
 $router->get('/usuarioI', [UsuarioController::class, 'indexI']);
 $router->get('/usuarioI/buscarI', [UsuarioController::class, 'buscarI']);
 $router->get('/usuarioM', [UsuarioController::class, 'indexM']);
-$router->get('/usuarioI/buscarM', [UsuarioController::class, 'buscarM']);
+$router->get('/usuarioM/buscarM', [UsuarioController::class, 'buscarM']);
+$router->get('/usuarioB', [UsuarioController::class, 'indexB']);
+$router->get('/usuarioB/buscarB', [UsuarioController::class, 'buscarB']);
 
 // ***** Area Administrador *******
 

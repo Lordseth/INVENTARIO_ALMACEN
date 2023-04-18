@@ -1,7 +1,4 @@
-<div class="campo">
-    <label for="numero_parteB">Numero de Parte:</label>
-    <input type="text"id="numero_parteB"placeholder="numero de parte"name="numero_parteB"value="<?php echo$broca->numero_parteB; ?>">
-</div>
+
 
 <div class="campo">
     <label for="descripcionB">Descripcion:</label>
@@ -13,6 +10,22 @@
         value="<?php echo $broca->descripcionB; ?>"
     >
 </div>
+
+<div class="campo">
+    <label for="numero_parteB">Numero de Parte:</label>
+    <input type="text"id="numero_parteB"placeholder="numero de parte"name="numero_parteB"value="<?php echo$broca->numero_parteB; ?>">
+</div>
+
+<div class="campo">
+    <label for="fotoB">Foto:</label>
+    <input type="file" id="fotoB" name="fotoB"> 
+    <input type="hidden" name="foto-guardada" value="<?php echo $broca->fotoB; ?>">
+</div>
+
+<?php if($broca->fotoB) { ?>
+        <img src="/brocasimg/<?php echo $broca->fotoB; ?>" >
+    <?php } ?>
+
 
 <div class="campo">
     <label for="existenciaB">Cantidad en Existencia:</label>
@@ -48,13 +61,4 @@
     >
 </div>
 
-<div class="campo">
-    <label for="fotoB">Foto:</label>
-    <input type="file" id="fotoB" name="fotoB"> 
-    <input type="hidden" name="foto-guardada" value="<?php echo $broca->fotoB; ?>">
-</div>
-
-<?php if($broca->fotoB) { ?>
-        <img src="/brocasimg/<?php echo $broca->fotoB; ?>" >
-    <?php } ?>
 

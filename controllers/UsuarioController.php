@@ -5,6 +5,7 @@ namespace Controllers;
 use Model\Servicio;
 use Model\Insertos;
 use Model\Machuelos;
+use Model\Brocas;
 use MVC\Router;
 
 class UsuarioController {
@@ -44,6 +45,19 @@ class UsuarioController {
         $router->render('/usuarioM/indexM', [
             'nombre'=> $_SESSION['nombre'],
             'machuelos' => $machuelos
+        ]);
+    }
+
+    public static function indexB(Router $router) {
+
+        session_start();
+
+
+        $brocas = Brocas::all();
+
+        $router->render('/usuarioB/indexB', [
+            'nombre'=> $_SESSION['nombre'],
+            'brocas' => $brocas
         ]);
     }
 
@@ -109,6 +123,28 @@ class UsuarioController {
         $router->render('usuarioM/buscarM', [
             'nombre' => $_SESSION['nombre'],
             'machuelos' => $machuelos
+            //'nombre' => $nombre
+        ]);
+    }
+
+    public static function buscarB(Router $router) {
+        session_start();
+
+
+        $numeroParte = $_GET['numero_parteB'] ?? '';        
+
+        // Consultar la base de datos
+        $consulta = "SELECT brocas.id, brocas.numero_parteB, brocas.descripcionB, brocas.existenciaB, brocas.proveedorB, brocas.ubicacionB, brocas.fotoB ";
+        $consulta .= " FROM brocas  ";
+        $consulta .= " WHERE numero_parteB =  '${numeroParte}' ";
+
+        $brocas = Brocas::SQL($consulta);
+
+        // debuguear($insertos);
+
+        $router->render('usuarioB/buscarB', [
+            'nombre' => $_SESSION['nombre'],
+            'brocas' => $brocas
             //'nombre' => $nombre
         ]);
     }

@@ -43,9 +43,9 @@
 
 <?php } else { ?>
     <div class="barra-servicios">
-        <a class="boton" href="/usuarioS">Ver Piezas Terminadas</a>
-        <a class="boton" href="/usuarioI">Ver Insertos</a>
-        <a class="boton" href="/usuarioM">Ver Machuelos</a>
-        <a class="boton" href="/usuarioB">Ver Brocas</a>
+        <a class="boton-barra-servicios" href="/usuarioS">Piezas Terminadas</a>
+        <a class="boton-barra-servicios" href="/usuarioI">Insertos</a>
+        <a class="boton-barra-servicios" href="/usuarioM">Machuelos</a>
+        <a class="boton-barra-servicios" href="/usuarioB">Brocas</a>
     </div>
 <?php } ?>
