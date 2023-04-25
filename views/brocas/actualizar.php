@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Actualizar Informacion de Machuelo</h1>
+<h1 class="nombre-pagina">Actualizar Informacion de Broca</h1>
 <p class="descripcion-pagina">Actualiza los valores del formulario</p>
 
 <?php

@@ -31,9 +31,6 @@ class Machuelos extends ActiveRecord {
             self::$alertas['error'][] = 'El numero de parte es obligatorio';
         }
 
-        if(!$this->existenciaM) {
-            self::$alertas['error'][] = 'La cantidad en existencia obligatoria';
-        }
 
         if(!$this->ubicacionM) {
             self::$alertas['error'][] = 'La ubicacion de herramienta es obligatoria';

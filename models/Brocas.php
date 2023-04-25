@@ -31,9 +31,6 @@ class Brocas extends ActiveRecord {
             self::$alertas['error'][] = 'El numero de parte es obligatorio';
         }
 
-        if(!$this->existenciaB) {
-            self::$alertas['error'][] = 'La cantidad en existencia obligatoria';
-        }
 
         if(!$this->ubicacionB) {
             self::$alertas['error'][] = 'La ubicacion de herramienta es obligatoria';

@@ -31,9 +31,6 @@ class Insertos extends ActiveRecord {
             self::$alertas['error'][] = 'El numero de parte es obligatorio';
         }
 
-        if(!$this->existenciaI) {
-            self::$alertas['error'][] = 'La cantidad en existencia obligatoria';
-        }
 
         if(!$this->ubicacionI) {
             self::$alertas['error'][] = 'La ubicacion de herramienta es obligatoria';

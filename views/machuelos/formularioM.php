@@ -1,5 +1,3 @@
-
-
 <div class="campo">
     <label for="descripcionM">Descripcion:</label>
     <input 

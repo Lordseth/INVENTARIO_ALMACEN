@@ -1,4 +1,4 @@
-<h1 class="nombre-pagina">Actualizar Informacion de Pieza</h1>
+<h1 class="nombre-pagina">Actualizar Informacion de Inserto</h1>
 <p class="descripcion-pagina">Actualiza los valores del formulario</p>
 
 <?php
