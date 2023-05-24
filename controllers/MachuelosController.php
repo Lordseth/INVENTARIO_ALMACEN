@@ -10,7 +10,7 @@ class MachuelosController {
 
         session_start();
 
-        isAdmin();
+        isAdmin(); 
 
         $machuelos = Machuelos::all();
 

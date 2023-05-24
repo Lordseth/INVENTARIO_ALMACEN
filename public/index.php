@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once __DIR__ . '/../includes/app.php';
 
@@ -8,6 +8,8 @@ use Controllers\ServicioController;
 use Controllers\InsertosController;
 use Controllers\MachuelosController;
 use Controllers\BrocasController;
+use Controllers\MaterialController;
+use Controllers\ConsumiblesController;
 use MVC\Router;
 
 $router = new Router();
@@ -78,6 +80,24 @@ $router->post('/brocas/crear', [BrocasController::class, 'crear']);
 $router->get('/brocas/actualizar', [BrocasController::class, 'actualizar']);
 $router->post('/brocas/actualizar', [BrocasController::class, 'actualizar']);
 $router->post('/brocas/eliminar', [BrocasController::class, 'eliminar']);
+
+// CRUD de Materia Prima
+$router->get('/material', [MaterialController::class, 'index']);
+$router->get('/material/buscar', [MaterialController::class, 'buscar']);
+$router->get('/material/crear', [MaterialController::class, 'crear']);
+$router->post('/material/crear', [MaterialController::class, 'crear']);
+$router->get('/material/actualizar', [MaterialController::class, 'actualizar']);
+$router->post('/material/actualizar', [MaterialController::class, 'actualizar']);
+$router->post('/material/eliminar', [MaterialController::class, 'eliminar']);
+
+// CRUD de Consumibles
+$router->get('/consumibles', [ConsumiblesController::class, 'index']);
+$router->get('/consumibles/buscar', [ConsumiblesController::class, 'buscar']);
+$router->get('/consumibles/crear', [ConsumiblesController::class, 'crear']);
+$router->post('/consumibles/crear', [ConsumiblesController::class, 'crear']);
+$router->get('/consumibles/actualizar', [ConsumiblesController::class, 'actualizar']);
+$router->post('/consumibles/actualizar', [ConsumiblesController::class, 'actualizar']);
+$router->post('/consumibles/eliminar', [ConsumiblesController::class, 'eliminar']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador
 $router->comprobarRutas();

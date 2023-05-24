@@ -1,3 +1,4 @@
+
 <div class="campo">
     <label for="descripcionM">Descripcion:</label>
     <input 
@@ -57,6 +58,8 @@
         value="<?php echo $machuelo->ubicacionM; ?>"
     >
 </div>
+
+
 
 
 

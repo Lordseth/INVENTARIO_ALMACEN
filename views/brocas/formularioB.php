@@ -1,3 +1,4 @@
+
 <div class="campo">
     <label for="descripcionB">Descripcion:</label>
     <input 
@@ -58,5 +59,6 @@
         value="<?php echo $broca->ubicacionB; ?>"
     >
 </div>
+
 
 

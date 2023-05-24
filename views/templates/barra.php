@@ -38,6 +38,22 @@
                     <li><a class="dropdown-item boton-barra-desplegable" href="/brocas/crear">Agregar Brocas</a></li>
                 </ul>
             </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle boton-barra-servicios" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Consumibles</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item boton-barra-desplegable" href="/consumibles">Ver Consumibles</a></li>
+                    <li><a class="dropdown-item boton-barra-desplegable" href="/consumibles/crear">Agregar Consumibles</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle boton-barra-servicios" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Materia Prima</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item boton-barra-desplegable" href="/material">Ver Material</a></li>
+                    <li><a class="dropdown-item boton-barra-desplegable" href="/material/crear">Agregar Material</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
